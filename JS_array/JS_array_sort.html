@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Array Sort</h2>
+    <button onclick="myFunction()">Try It de day tang </button><br>
+    <button onclick="myFunction1()">Try It de day giam </button><br>
+    <button onclick="myFunction2()">Try It de xep random </button><br>
+    <p id ="demo"></p>
+    <script>
+        const Arr=[40 , 10 , 1, 5, 25, 12 ];
+        document.getElementById("demo").innerHTML=Arr.join(" ");
+        function myFunction(){
+            document.getElementById("demo").innerHTML=(Arr.sort(function(a,b){return a-b;})).join(" ");
+        }
+        function myFunction1(){
+            document.getElementById("demo").innerHTML=(Arr.sort(function(a,b){return b-a;})).join(" ");
+        }
+        function myFunction2(){
+            document.getElementById("demo").innerHTML=(Arr.sort(function(a,b){return 0.5-Math.random()})).join(" ");
+        }
+        
+    </script>
+</body>
+</html>

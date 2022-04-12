@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Array Methods</h2>
+    <h2>ToString()</h2>
+    <h2>Join()</h2>
+    <button onclick = "myfunction()">Try It to perfrom Join()</button>
+    <button onclick="myfunction2()">Try It to perform POP()</button>
+
+    <p>The Join() method joins array element into a string .</p>
+    <p>It this example we have "*" as a separator between the element .</p>
+    <p id="demo"></p>
+    <script>
+        const fruits= ["Banana", "Orange", "Apple", "Mango"];
+        document.getElementById("demo").innerHTML=fruits.toString();
+        function myfunction(){
+            document.getElementById("demo").innerHTML=fruits.join(" * ");
+        }
+        function myfunction2(){
+            let fruit= fruits.pop();
+            document.getElementById("demo").innerHTML=fruits + "<br>" + `deleted element ${fruit}`;
+        }
+    </script>
+</body>
+</html>

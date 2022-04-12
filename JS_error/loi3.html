@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Errors</h2>
+    <input type="text" id="demo" placeholder="Enter your age">
+    <button type="button" onclick="myfunction()">Enter</button>
+    <p id="error"></p>
+    <script>
+        function myfunction(){
+            const message=document.getElementById("error");
+            message.innerHTML="";
+            let x=document.getElementById("demo").value;
+            try{
+                if(x=="") throw "Empty";
+                if(isNaN(x)) throw "Khong hop le";
+                x= Number(x);
+                if(1<=x & x<30 ){
+                    throw("you ")
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

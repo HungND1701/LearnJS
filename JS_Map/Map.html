@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Map</h2>
+    <p id="map0"></p>
+    <p id="map"></p>
+    <p id="map1"></p>
+    <p id="map2"></p>
+    <p id="mapsize"></p>
+    <p id="mapsize1"></p>
+    <p id="map3"></p>
+    <p id="map4"></p>
+    <script>
+        const fruits = new Map();
+        // Set Map Values
+        fruits.set("apples", 500);
+        fruits.set("bananas", 300);
+        fruits.set("oranges", 200);
+        let text="";
+        for(const x of fruits){
+            text+=x+"<br>";
+        }
+        document.getElementById("map0").innerHTML=text;
+        document.getElementById("map").innerHTML= fruits.get("apples");
+        fruits.set("apples",400);
+        document.getElementById("map1").innerHTML= fruits.get("apples");
+        document.getElementById("map2").innerHTML= fruits.has("bananas");
+        document.getElementById("mapsize").innerHTML=fruits.size;
+        fruits.delete("bananas");
+        document.getElementById("mapsize1").innerHTML=fruits.size;
+        let txt="";
+        fruits.forEach (function(value, key) {
+            txt += key + ' = ' + value+"<br>";
+        })
+        document.getElementById("map3").innerHTML=txt;
+        let text1 = "";
+        for (const x of fruits.entries()) {
+            text1 += x+"<br>";
+        }
+        document.getElementById("map4").innerHTML=text1;
+
+    </script>
+</body>
+</html>
