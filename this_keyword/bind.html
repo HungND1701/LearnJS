@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript This Keyword</h2>
+    <p id="demo"></p>
+    <button onclick="this.style.display='none'">
+        Click to Remove Me!
+    </button>
+    <script>
+        const person1={
+            firstName : "Pham",
+            lastName : "Huy",
+            fullname : function(){
+                return this.firstName + " " + this.lastName;
+            }
+        };  
+        const person2= {
+            firstName : "Nguyen",
+            lastName : "Hung",
+        };
+        let fullName=person1.fullname.bind(person2);
+        document.getElementById("demo").innerHTML=fullName(); 
+    </script>
+</body>
+</html>
